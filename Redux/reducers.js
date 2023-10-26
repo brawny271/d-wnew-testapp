@@ -17,10 +17,10 @@ const rootReducer = (state = initialState, action) => {
 
       if (existingCard) {
         existingCard.quantity += 1;
-        existingCard.total = existingCard.quantity * existingCard.price;
+        existingCard.totalPrice = existingCard.quantity * existingCard.price;
       }else{
         newItem.quantity = 1;
-        newItem.total = newItem.price;
+        newItem.totalPrice = newItem.price;
         state.cart.push(newItem);
       }
 
